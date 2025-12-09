@@ -1,0 +1,210 @@
+:root {
+    --comic-red: #e23636;
+    --comic-blue: #005b96;
+    --comic-yellow: #f9c74f;
+    --comic-black: #212121;
+    --comic-white: #ffffff;
+    --border-thickness: 4px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--comic-blue);
+    background-image: radial-gradient(var(--comic-black) 1px, transparent 1px);
+    background-size: 20px 20px;
+    font-family: 'Roboto Condensed', sans-serif;
+    color: var(--comic-black);
+    padding: 240px 20px 20px 20px;
+}
+
+.comic-container {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: var(--comic-white);
+    border: var(--border-thickness) solid var(--comic-black);
+    box-shadow: 10px 10px 0px var(--comic-black);
+    padding: 30px;
+}
+
+h1, h2 {
+    font-family: 'Bangers', cursive;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 
+        3px 3px 0px var(--comic-black), 
+        -1px -1px 0px var(--comic-black),  
+        1px -1px 0px var(--comic-black),
+        -1px 1px 0px var(--comic-black),
+         1px 1px 0px var(--comic-black);
+}
+
+h1.main-title {
+    font-size: 3.5rem;
+    color: var(--comic-yellow);
+    text-align: center;
+    margin-bottom: 30px;
+    transform: rotate(-2deg);
+}
+
+h2 {
+    position: relative;
+    overflow: visible;
+    font-size: 2.5rem;
+    color: var(--comic-white);
+    background-color: var(--comic-red);
+    display: inline-block;
+    padding: 10px 20px;
+    border: var(--border-thickness) solid var(--comic-black);
+    box-shadow: 5px 5px 0px var(--comic-black);
+    margin-bottom: 20px;
+}
+
+.comic-sticker-pop {
+    position: absolute;
+    top: -35px;
+    right: -75px;
+    font-family: 'Bangers', cursive;
+    font-size: 1.8rem;
+    color: var(--comic-white);
+    background-color: var(--comic-yellow);
+    border: var(--border-thickness) solid var(--comic-black);
+    padding: 5px 12px;
+    transform: rotate(15deg);
+    z-index: 10;
+    box-shadow: 4px 4px 0 rgba(0,0,0,0.3);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding-top: 160px;
+}
+
+.main-logo {
+    max-width: 400px;
+    height: auto;
+    border: var(--border-thickness) solid var(--comic-black);
+    border-radius: 50%; 
+    box-shadow: 5px 5px 0px var(--comic-yellow);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -208px;
+    z-index: 10;
+    background-color: var(--comic-white);
+}
+
+.comic-panel {
+    margin-bottom: 40px;
+    padding: 20px;
+    border: var(--border-thickness) solid var(--comic-black);
+    background-color: #f4f4f4;
+    position: relative;
+}
+
+.services-section {
+    text-align: center;
+    background-color: var(--comic-blue);
+}
+
+.services-list {
+    list-style-type: none;
+}
+
+.services-list li {
+    background-color: var(--comic-white);
+    border: 3px solid var(--comic-black);
+    padding: 15px;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    box-shadow: 5px 5px 0px rgba(0,0,0,0.2);
+    transform: skew(-10deg);
+}
+
+.social-section {
+    text-align: center;
+    background-color: var(--comic-yellow);
+}
+
+.social-section p {
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+    background-color: var(--comic-black);
+    color: var(--comic-white);
+    border: var(--border-thickness) solid var(--comic-black);
+    text-decoration: none;
+    font-size: 2rem;
+    border-radius: 10px;
+    transition: all 0.2s ease;
+    box-shadow: 5px 5px 0px rgba(0,0,0,0.3);
+}
+
+.social-link.fb:hover {
+    background-color: #3b5998;
+    color: white;
+    transform: translate(-3px, -3px);
+    box-shadow: 8px 8px 0px var(--comic-black);
+}
+
+.social-link.insta:hover {
+    background: #d6249f;
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+    color: white;
+    transform: translate(-3px, -3px);
+    box-shadow: 8px 8px 0px var(--comic-black);
+}
+
+.footer-section {
+    text-align: center;
+    background-color: var(--comic-red);
+    color: var(--comic-white);
+}
+
+.contact-details p {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.contact-details i {
+    margin-right: 10px;
+    color: var(--comic-yellow);
+}
+
+@media (max-width: 600px) {
+    .comic-container {
+        padding: 15px;
+        width: 100%;
+    }
+    h1.main-title {
+        font-size: 2.5rem;
+    }
+    h2 {
+        font-size: 1.8rem;
+    }
+    .services-list li {
+        transform: skew(0deg);
+    }
+}
